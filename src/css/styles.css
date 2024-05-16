@@ -1,0 +1,125 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+@import url('./reset.css');
+@import url('./loader.css');
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.gallery {
+  width: 1128px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-item {
+  width: calc((100% - 54px) / 3);
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+}
+
+.stat-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.stat-value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.search-form {
+  width: 371px;
+  margin: 36px auto 32px;
+  display: flex;
+  gap: 8px;
+}
+
+.search-input {
+  width: 272px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #808080;
+}
+
+.search-input:focus {
+  border-color: #4e75ff !important;
+}
+
+.search-input:hover {
+  border-color: #000;
+}
+
+.search-btn {
+  width: 91px;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.search-btn:hover {
+  background-color: #6c8cff;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+}
