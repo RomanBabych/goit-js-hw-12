@@ -91,6 +91,13 @@ async function onLoadMoreBtnClick() {
     });
     if (imagesData.totalHits <= currentPage * 15) {
       loadMoreBtnEl.classList.add('is-hidden');
+      iziToast.info({
+        position: 'topRight',
+        transitionIn: 'bounceInLeft',
+        message: "We're sorry, but you've reached the end of search results.",
+        messageSize: 16,
+        timeout: 3000,
+      });
     }
   } catch (error) {
     console.log(error);
