@@ -57,6 +57,14 @@ async function onSearchFormSubmit(event) {
       lightbox.refresh();
       if (imagesData.totalHits > currentPage * 15) {
         loadMoreBtnEl.classList.remove('is-hidden');
+      } else {
+        iziToast.info({
+          position: 'topRight',
+          transitionIn: 'bounceInLeft',
+          message: "We're sorry, but you've reached the end of search results.",
+          messageSize: 16,
+          timeout: 3000,
+        });
       }
     }
   } catch (error) {
@@ -89,6 +97,7 @@ async function onLoadMoreBtnClick() {
       top: initialHeight * 2,
       behavior: 'smooth',
     });
+
     if (imagesData.totalHits <= currentPage * 15) {
       loadMoreBtnEl.classList.add('is-hidden');
       iziToast.info({
